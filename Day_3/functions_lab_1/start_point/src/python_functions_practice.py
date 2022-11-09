@@ -92,4 +92,9 @@ def number_to_short_month_name(num):
 def cube(length):
     return length * length * length
 
+def reverse_word(reverse):
+    return reverse[::-1]
 
+def fahrenheit_to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) * (5.0/9.0)
+    return round(celsius, 2)
