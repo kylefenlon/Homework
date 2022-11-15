@@ -96,5 +96,6 @@ def reverse_word(reverse):
     return reverse[::-1]
 
 def fahrenheit_to_celsius(fahrenheit):
-    celsius = (fahrenheit - 32) * (5.0/9.0)
+    celsius = (fahrenheit - 32) * (5/9)
     return round(celsius, 2)
+
