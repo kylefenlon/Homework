@@ -27,12 +27,16 @@ class TestRoom(unittest.TestCase):
              self.assertEqual(13, self.room_1.guests)
 
        def test_guest_leaves(self):
-              self.room_2.guest_leaves(self)
+              self.room_2.guest_leaves()
               self.assertEqual(13, self.room_2.guests)
        
        def test_add_song(self):
               self.room_3.add_song(self.song_1)
               self.assertEqual(1, self.room_3.song_amount())
+
+       def test_not_enough_space(self):
+            self.room_3.guest_buys_entry(self.room_3, self.guest_3)
+            self.assertEqual("Sorry there is no space", self.room_3.too_many_people())
 
 
 

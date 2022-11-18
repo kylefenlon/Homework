@@ -7,10 +7,13 @@ class Room:
         self.songs = []
 
     def guest_buys_entry(self, room, guest):
-        guest.reduce_cash(room.entry_price)
-        self.guests += 1
-
-    def guest_leaves(self, room):
+        if room.guests - room.capacity:
+            guest.reduce_cash(room.entry_price)
+            self.guests += 1
+        return self.too
+    
+ 
+    def guest_leaves(self):
         self.guests -= 1
 
     def song_amount(self):
@@ -19,5 +22,6 @@ class Room:
     def add_song(self, song):
         self.songs.append(song)
 
+    def too_many_people(self):
+        return "Sorry there is no space"
 
-        
