@@ -6,13 +6,18 @@ class Room:
         self.capacity = capacity
         self.songs = []
 
-    def guest_buys_entry(self, entry, guest):
+    def guest_buys_entry(self, room, guest):
+        guest.reduce_cash(room.entry_price)
         self.guests += 1
-        guest.reduce_cash(entry.entry_price)
 
     def guest_leaves(self, room):
         self.guests -= 1
 
+    def song_amount(self):
+        return len(self.songs)
+
+    def add_song(self, song):
+        self.songs.append(song)
 
 
         

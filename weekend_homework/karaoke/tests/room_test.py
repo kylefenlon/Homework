@@ -27,8 +27,14 @@ class TestRoom(unittest.TestCase):
              self.assertEqual(13, self.room_1.guests)
 
        def test_guest_leaves(self):
-              self.room_2.guest_leaves(1)
+              self.room_2.guest_leaves(self)
               self.assertEqual(13, self.room_2.guests)
-         
+       
+       def test_add_song(self):
+              self.room_3.add_song(self.song_1)
+              self.assertEqual(1, self.room_3.song_amount())
+
+
+
 
 
