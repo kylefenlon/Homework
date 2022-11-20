@@ -39,6 +39,6 @@ class TestRoom(unittest.TestCase):
             self.assertEqual("Sorry there is no space", self.room_3.too_many_people())
 
 
-
-
-
+       def test_room_has_guests_fav_song(self):
+        self.room_1.room_has_fav_song(self.guest_2, self.song_2)
+        self.assertEqual(

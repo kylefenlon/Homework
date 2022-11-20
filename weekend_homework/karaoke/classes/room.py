@@ -10,9 +10,8 @@ class Room:
         if room.guests - room.capacity:
             guest.reduce_cash(room.entry_price)
             self.guests += 1
-        return self.too
+        return self.too_many_people
     
- 
     def guest_leaves(self):
         self.guests -= 1
 
@@ -25,3 +24,10 @@ class Room:
     def too_many_people(self):
         return "Sorry there is no space"
 
+    def guest_fav_song(self):
+        return "Woo hoo"
+
+    def room_has_fav_song(self, guest, songs):
+        if guest.fav_song == songs:
+            return self.guest_fav_song
+        return None
