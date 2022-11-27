@@ -1,0 +1,144 @@
+.update_stock{
+    display: flex;
+    position: relative;;
+    
+}
+
+.library-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.background{
+background: linear-gradient(132deg, #0a01b4, #212335, rgb(179, 12, 12));
+background-size: 400% 400%;
+animation: Gradient 15s ease infinite;
+position: relative;
+height: 10vh;
+width: 110%;
+overflow: hidden;
+padding:0;
+margin:-8px;
+}
+
+header{
+    padding-left: 2rem;
+    color: whitesmoke;
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width:100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #top-menu{
+    color: #FFF;
+    float: right;
+    margin:30px 90px;;
+  }
+
+  #top-menu ul{
+    list-style: none;
+  }
+
+  #top-menu ul li {
+    float: left;
+    transition: .3s;
+  }
+
+  #top-menu ul li a{
+    text-decoration: none;
+    color: #EFEEF5;
+    transition: .5;
+    font-size: 25px;
+    margin-left:16px;
+  }
+  #top-menu ul li:hover a{
+    text-decoration: underline;
+    color: #EFEEF5;
+  }
+  #top-menu ul li:hover{
+    height: 5px;
+    padding-top: 5px;
+    margin-top: 5px;
+    color: #EFEEF5;
+    text-decoration: none;
+    border-radius: 5px;
+    transform: skew(15deg);
+  }
+
+  /* Animate Background*/
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+#bottom-menu{
+    color: rgb(105, 57, 237);
+    float: left;
+    margin:30px 90px;;
+  }
+
+  #bottom-menu ul{
+    list-style: none;
+  }
+
+  #bottom-menu ul li {
+    float: left;
+    transition: .3s;
+  }
+  #bottom-menu ul li a{
+    text-decoration: none;
+    color: rgb(50, 50, 227);
+    transition: .5;
+    font-size: 25px;
+    margin-left:16px;
+  }
+  #bottom-menu ul li:hover a{
+    text-decoration: underline;
+    color: #5a40eb;
+  }
+  #bottom-menu ul li:hover{
+    height: 5px;
+    padding-top: 5px;
+    margin-top: 5px;
+    color: #EFEEF5;
+    text-decoration: none;
+    border-radius: 5px;
+    transform: skew(15deg);
+  }
+
+#books-background{
+    background: linear-gradient(132deg, #f4f4f7, #787978, rgb(39, 40, 39));
+    background-size: 4000% 4000%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 100%;
+    width: 110%;
+    overflow: hidden;
+    padding:0;
+    margin:-8px;
+}
+
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
